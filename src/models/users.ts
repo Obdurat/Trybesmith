@@ -39,7 +39,7 @@ export default class UserModel {
 
   public async genToken() {
     const { password, ...rest } = this;
-    const token = sign(rest, process.env.SECRET as string);
+    const token = sign(rest, 'segredomuitosecretoqueninguemvaisaber');
     return token;
   }
 }

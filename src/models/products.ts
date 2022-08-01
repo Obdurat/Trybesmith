@@ -26,7 +26,7 @@ export default class ProductsModel {
   static async findAll(args?: { orderId?: number }) {
     if (args?.orderId) {
       const [result] = await connection
-        .query('SELECT id FROM Trybesmith.Products WHERE orderId = ?', [args.orderId]);
+        .query('SELECT * FROM Trybesmith.Products WHERE orderId = ?', [args.orderId]);
       return result;
     }
 
